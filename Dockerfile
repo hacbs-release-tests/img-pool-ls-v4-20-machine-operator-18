@@ -3,7 +3,7 @@ FROM registry.access.redhat.com/ubi9/ubi:latest
 RUN dnf install -y python3 python3-pip vim git wget && dnf clean all
 
 # Size set per component by build-images.sh (50-300 MB)
-ARG IMAGE_SIZE_MB=279
+ARG IMAGE_SIZE_MB=152
 RUN SIZE_MB=${IMAGE_SIZE_MB} && \
     echo "========================================" && \
     echo "Building large test image: ${SIZE_MB} MB" && \
